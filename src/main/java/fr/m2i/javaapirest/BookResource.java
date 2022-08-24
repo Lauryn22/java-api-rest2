@@ -144,7 +144,7 @@ public class BookResource {
         return result.toString();
     }
     
-     @GET
+    @GET
     @Path("/details/{id}")
     @Produces(MediaType.TEXT_PLAIN)
     public String getDetailsTextBookById(@PathParam("id") int id) {

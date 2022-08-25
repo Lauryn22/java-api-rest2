@@ -1,19 +1,41 @@
 
 package fr.m2i.javaapirest.tpuser.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+
+@Entity
+@Table(name = "utilisateurs")
 public class User {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
+   
     private String lastname;
+    
+
     private String firstname;
+    
+    
     private String role;
+    
+    
     private String email;
+    
+  
     private String password;
     
     public User() {
         
     }
+   
 
     public User(String lastname, String firstname, String role, String email, String password) {
         this.lastname = lastname;
